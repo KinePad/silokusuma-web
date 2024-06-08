@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Saya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+            </ul>
+        </nav>
+        <h1 id="title">Proyek Saya</h1>
+    </header>
+    <main>
+        <section id="projects">
+            <h2>Proyek Saya</h2>
+            <div class="project">
+                <h3>Proyek Kalkulator</h3>
+                <pre id="code1" class="code-block">
+                    <code>
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b === 0) {
+        return 'Error';
+    }
+    return a / b;
+}
+                    </code>
+                </pre>
+                <button onclick="copyCode('code1')">Salin Kode</button>
+            </div>
+            <div class="project">
+                <h3>Permainan Tebak Angka</h3>
+                <pre id="code2" class="code-block">
+                    <code>
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
+
+function guessNumber(userGuess) {
+    attempts++;
+    if (userGuess === randomNumber) {
+        return `Selamat! Anda menebak angka dalam ${attempts} percobaan.`;
+    } else if (userGuess < randomNumber) {
+        return 'Tebakan Anda terlalu rendah.';
+    } else {
+        return 'Tebakan Anda terlalu tinggi.';
+    }
+}
+                    </code>
+                </pre>
+                <button onclick="copyCode('code2')">Salin Kode</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Silo Kusuma. Semua Hak Dilindungi.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
